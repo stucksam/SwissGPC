@@ -1,0 +1,14 @@
+source: "srf"
+youtube_url: "https://www.youtube.com/watch?v=XYZ123"
+podcast_name: ""
+write_attrs_to_hdf5: false
+
+steps:
+  download: true
+  diarization: true
+  segmentation: true
+  phon_transcription: true
+  dialect_classification: true
+  ch_transcription: true
+  mel_spectrogram: true
+  move_into_dialect_h5: false
