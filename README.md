@@ -1,4 +1,6 @@
 # SwissGPC
+[![DOI](https://zenodo.org/badge/993206403.svg)](https://doi.org/10.5281/zenodo.15554161)
+
 This repository holds the official implementation of the SwissGPC (Swiss German Podcast Corpus) pipeline used to weakly label data collected from
 YouTube and the Swiss Broadcasting Corporation (SRG / SRF). As we do not possess any rights to the collected data, it is not
 possible to publish the annotated dataset itself. Instead, we publish the data pipeline that downloads, transcribes and
@@ -68,8 +70,8 @@ were downloaded over a period of time spanning from September 2024 to March 2025
 
 ## Data pipeline
 The data from YouTube is downloaded using [pytubefix](https://github.com/JuanBindez/pytubefix) while the SRF data was sourced via the official [SRF API](https://developer.srgssr.ch/api-catalog). Specifically for YT
-the code expects a playlist of videos instead of just a video link. This is so that all episodes can be downloaded at once. SRF podcasts only require the name
-without any additional information. The pipeline itself is built to download and transcribe the podcasts sequentially, i.e. one podcast after another. The code can of course be changed by you 
+the code expects a playlist of videos instead of just a video link. This is so that all episodes can be downloaded at once. SRF podcasts only require the podcast name
+without any additional information. The pipeline itself is built to download and transcribe the podcasts sequentially, i.e. one podcast after another. The code can be changed by you 
 to do every step in batch und should not be too much effort to do so. Controlling the pipeline is done via the [config.yaml](config.yaml), in which you can set what podcast should be downloaded
 from which source and which pipeline steps should run. See Table below for more information about the parameters. We utilized hdf5 files
 in our setup and as such all data is put into hdf5 files on segmentation. This can be changed to your setup accordingly.
